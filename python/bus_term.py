@@ -71,7 +71,7 @@ def callback():
     html = requests.get(stationid_url)
     if html.status_code == 200:
             html_text = html.text
-    xml_data = html_text
+    xml_data = html_text 
     soup = BeautifulSoup(xml_data,'lxml')
     
     isfound = soup.find_all("resultcode")
